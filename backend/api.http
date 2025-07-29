@@ -1,0 +1,75 @@
+###
+POST http://localhost:9090/register
+Content-Type: application/json
+
+{
+  "username": "balram123",
+  "password": "123",
+  "email": "balram@gmail.com",
+  "name": "Balram"
+}
+
+###
+POST http://localhost:9090/register
+Content-Type: application/json
+
+{
+  "username": "shivam123",
+  "password": "123",
+  "email": "shivam@gmsil.com",
+  "name": "shivam"
+}
+
+###
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+  "password": "123",
+  "email": "balram@gmail.com"
+}
+
+###
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+  "password": "mypassword",
+  "email": "shivam@example.com"
+}
+
+###
+GET http://localhost:9090/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token": "cd6bf85c87d21283f2e0e9b8cf360eb8dca11dbaf4e35fdbc1d19f784601880a"
+}
+
+###
+POST http://localhost:9090/update_profile_data
+Content-Type: application/json
+
+{
+  "token": "cd6bf85c87d21283f2e0e9b8cf360eb8dca11dbaf4e35fdbc1d19f784601880a",
+  "bio": "software engineer ready to contribute the organozations",
+  "currentPost": "SDE1",
+  "pastWork": [
+    {
+      "company": "Microsoft",
+      "position": "SDE1",
+      "years": "Freser+"
+    }
+  ],
+  "education": [
+    {
+      "school": "Haryana",
+      "degree": "MCA",
+      "fieldOfStudy": "2024-2026"
+    }
+  ]
+}
+
+###
+GET http://localhost:9090/user/get_all_users
+Content-Type: application/json
